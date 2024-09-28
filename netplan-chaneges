@@ -1,0 +1,14 @@
+            
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:  # Replace with your actual interface name
+      dhcp4: no
+      addresses:
+        - 192.168.1.206/24  # Your desired static IP with subnet mask
+      gateway4: 192.168.1.1   # Your gateway IP
+      nameservers:
+        addresses:
+          - 8.8.8.8          # Primary DNS
+          - 8.8.4.4
